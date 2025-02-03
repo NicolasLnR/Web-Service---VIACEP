@@ -1,0 +1,6 @@
+@Web_Service___VIACEP_HostAddress = http://localhost:5103
+
+GET {{Web_Service___VIACEP_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
