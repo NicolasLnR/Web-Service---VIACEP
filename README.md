@@ -74,10 +74,6 @@ GET http://localhost:5000/api/cep/01001000
 - Implementar autenticação para uso restrito da API.
 - Suporte a mais formatos de saída (XML, CSV).
 
-## 📜 Licença
-
-Este projeto é distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
 ---
 💡 *Feito com dedicação para aprendizado e crescimento na área de desenvolvimento!* 🚀
 
