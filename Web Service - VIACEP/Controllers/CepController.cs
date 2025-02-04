@@ -17,19 +17,19 @@ public class CepController : ControllerBase
     {
         if (string.IsNullOrWhiteSpace(cep))
         {
-            return BadRequest("CEP inválido.");
+            return BadRequest(new { message = "CEP inválido." });
         }
 
         if (cep.Length != 8 || !long.TryParse(cep, out _))
         {
-            return BadRequest("CEP deve conter 8 dígitos numéricos.");
+            return BadRequest(new { message = "CEP deve conter 8 dígitos numéricos." });
         }
 
         var resultado = await _viaCepService.BuscarCepAsync(cep);
 
         if (resultado == null)
         {
-            return NotFound("CEP não encontrado.");
+            return NotFound(new { message = "CEP não encontrado." });
         }
 
         return Ok(resultado);

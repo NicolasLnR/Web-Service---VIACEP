@@ -29,6 +29,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Habilitar arquivos estáticos (para servir HTML, CSS, JS da pasta wwwroot)
+app.UseStaticFiles();
+
 // Habilitar roteamento e controle de requisições
 app.UseHttpsRedirection();
 app.UseAuthorization();
@@ -36,3 +39,4 @@ app.MapControllers();
 
 // Iniciar a aplicação
 app.Run();
+
